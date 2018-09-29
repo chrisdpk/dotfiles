@@ -5,4 +5,5 @@
 
 
 ### Additional Theming
-* `Arc Dark`, custom colored in orange, see code
+* `Arc Dark`, apply custom orange theme by placing `gtk.css` in `/usr/share/themes/Arc-Dark/gtk-3.0/`
+
