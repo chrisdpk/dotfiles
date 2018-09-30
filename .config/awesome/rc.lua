@@ -408,7 +408,7 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
-    awful.key({ altkey }, "Up",
+    --[[ awful.key({ altkey }, "Up",
         function ()
             os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
             beautiful.volume.update()
@@ -438,7 +438,7 @@ globalkeys = my_table.join(
             beautiful.volume.update()
         end,
         {description = "volume 0%", group = "hotkeys"}),
-
+    --]]
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
         function ()
@@ -660,7 +660,8 @@ awful.rules.rules = {
 
     { rule = { instance  = "atom" },
       properties = { screen = 1, tag = "code" } },
-
+    { rule = { name = "weechat" },
+      properties = {tag = "irc", maximized = true } },
     { rule = { class = "Gimp", role = "gimp-image-window" },
       properties = { maximized = true } },
 }
