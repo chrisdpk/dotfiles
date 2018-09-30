@@ -88,9 +88,9 @@ local themes = {
 local chosen_theme = themes[3]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "urxvtc"
+local terminal     = "urxvt"
 local editor       = os.getenv("EDITOR") or "vim"
-local gui_editor   = "gvim"
+local gui_editor   = "atom"
 local browser      = "firefox"
 local guieditor    = "atom"
 local scrlocker    = "slock"
@@ -653,10 +653,16 @@ awful.rules.rules = {
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+      properties = { screen = 1, tag = "www" } },
+
+    { rule = { class = "Thunderbird" },
+      properties = { screen = 1, tag = "mail" } },
+
+    { rule = { instance  = "atom" },
+      properties = { screen = 1, tag = "code" } },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
-          properties = { maximized = true } },
+      properties = { maximized = true } },
 }
 -- }}}
 
@@ -741,3 +747,4 @@ client.connect_signal("property::maximized", border_adjust)
 client.connect_signal("focus", border_adjust)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
