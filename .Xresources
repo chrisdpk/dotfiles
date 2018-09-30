@@ -1,3 +1,5 @@
+urxvt*metaSendsEscape:    true
+
 ! Dremora 2.0
 URxvt.font: xft:hack:size=10
 URxvt*scrollBar: false
