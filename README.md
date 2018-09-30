@@ -2,6 +2,7 @@
 
 ### Software
 * urxvt
+* zsh
 * weechat
 
 ### Additional Theming
