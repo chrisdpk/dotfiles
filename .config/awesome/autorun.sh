@@ -8,4 +8,4 @@ function run {
 
 run firefox
 run thunderbird
-run urxvt -e weechat
+run "urxvt -e weechat"
