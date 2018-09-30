@@ -653,7 +653,7 @@ awful.rules.rules = {
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = "www" } },
+      properties = { screen = 1, tag = "www", maximized = true } },
 
     { rule = { class = "Thunderbird" },
       properties = { screen = 1, tag = "mail" } },
